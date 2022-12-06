@@ -57,9 +57,10 @@ dal js (dentro al nostro 'carousel-item', per capirci).
 
 const carouselContainer = document.querySelector('.carousel-image');
 
+divList = [];
+
 for (let i= 0; i < images.length; i++) {
    const currentImage = images[i];
-   console.log(images[i]);
 
    const carouselItem = document.createElement('div');
    carouselItem.classList.add('my_carousel-item')
@@ -67,7 +68,13 @@ for (let i= 0; i < images.length; i++) {
    `<img src="./${currentImage.image}" alt="${currentImage.title} Image">`;
 
    carouselContainer.appendChild(carouselItem);
+
+   divList.push(carouselItem);
 };
+
+console.log(divList);
+
+divList[0].classList.add('active');
 
 /**
  * Milestone 1:
