@@ -8,9 +8,6 @@ titolo
 descrizione
 Creare un carosello.
 
-
-Milestone 1:
-Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine attiva diventerà visibile.
 Milestone 2:
 Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine.
 Bonus 1:
@@ -70,5 +67,18 @@ for (let i= 0; i < images.length; i++) {
 
 };
 
+/**
+ * Milestone 1:
+Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine attiva diventerà visibile.
+ */
 
+const buttonUp = document.querySelector('fa-egg');
+const buttonDown = document.querySelector('fa-crow');
 
+buttonUp.addEventListener('click', function() {
+
+});
+
+buttonDown.addEventListener('click', function() {
+
+});
