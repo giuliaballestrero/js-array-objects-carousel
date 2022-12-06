@@ -56,15 +56,17 @@ dal js (dentro al nostro 'carousel-item', per capirci).
 */
 
 const carouselContainer = document.querySelector('.carousel-image');
-const carouselItem = document.createElement('div');
-carouselItem.classList.add('my_carousel-item');
-carouselContainer.appendChild(carouselItem);
 
 for (let i= 0; i < images.length; i++) {
    const currentImage = images[i];
-   carouselItem.innerHTML += 
-   `  <img src="./${currentImage.image}" alt="${currentImage.title} Image">`;
+   console.log(images[i]);
 
+   const carouselItem = document.createElement('div');
+   carouselItem.classList.add('my_carousel-item')
+   carouselItem.innerHTML = 
+   `<img src="./${currentImage.image}" alt="${currentImage.title} Image">`;
+
+   carouselContainer.appendChild(carouselItem);
 };
 
 /**
@@ -82,3 +84,5 @@ buttonUp.addEventListener('click', function() {
 buttonDown.addEventListener('click', function() {
 
 });
+
+//incremerntare o diminuire il valore di una variabile//
