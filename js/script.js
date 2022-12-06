@@ -93,14 +93,20 @@ buttonUp.addEventListener('click', function() {
    if (current >= divList.length) {
       current = 0;
    }
-   
+
    divList[current].classList.add('active');
    
 });
 
 buttonDown.addEventListener('click', function() {
+   divList[current].classList.remove('active');
+   current--;
 
-
+   if (current < 0) {
+      current = divList.length - 1 ;
+   }
+   
+   divList[current].classList.add('active');
 });
 
 //se current < 0     current = lung array - 1;
