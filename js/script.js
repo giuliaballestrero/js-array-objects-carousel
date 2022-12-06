@@ -81,15 +81,26 @@ divList[0].classList.add('active');
 Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine attiva diventerà visibile.
  */
 
-const buttonUp = document.querySelector('fa-egg');
-const buttonDown = document.querySelector('fa-crow');
+const buttonUp = document.querySelector('.fa-egg');
+const buttonDown = document.querySelector('.fa-crow');
+
+let current = 0;
 
 buttonUp.addEventListener('click', function() {
+   divList[current].classList.remove('active');
+   current++;
 
+   if (current >= divList.length) {
+      current = 0;
+   }
+   
+   divList[current].classList.add('active');
+   
 });
 
 buttonDown.addEventListener('click', function() {
 
+
 });
 
-//incremerntare o diminuire il valore di una variabile//
+//se current < 0     current = lung array - 1;
