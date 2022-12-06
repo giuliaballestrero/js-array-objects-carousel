@@ -8,8 +8,6 @@ titolo
 descrizione
 Creare un carosello.
 
-Milestone 2:
-Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine.
 Bonus 1:
 Aggiungere il ciclo infinito del carosello. Ovvero se l'immagine attiva è la prima e l'utente clicca la freccia verso l'alto,
 l'immagine che deve attivarsi sarà l'ultima e viceversa per l'ultima immagine se l'utente clicca la freccia verso il basso.
@@ -65,8 +63,9 @@ for (let i= 0; i < images.length; i++) {
    const carouselItem = document.createElement('div');
    carouselItem.classList.add('my_carousel-item')
    carouselItem.innerHTML = 
-   `<img src="./${currentImage.image}" alt="${currentImage.title} Image">`;
-
+   `<img src="./${currentImage.image}" alt="${currentImage.title} Image">
+   <h1 class="py-2">${currentImage.title}</h1>
+   <p>${currentImage.text}</p>`; /****Milestone 2: Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine.*/
    carouselContainer.appendChild(carouselItem);
 
    divList.push(carouselItem);
@@ -109,4 +108,3 @@ buttonDown.addEventListener('click', function() {
    divList[current].classList.add('active');
 });
 
-//se current < 0     current = lung array - 1;
